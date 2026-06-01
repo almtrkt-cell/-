@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  WABEL design tokens.
+  shadcn/ui semantic tokens are expressed as HSL channels (consumed as hsl(var(--x))).
+  Raw WABEL brand colors are exposed as hex via tailwind.config.ts (bg-carbon, bg-splash, ...).
+*/
+@layer base {
+  :root {
+    /* shadcn semantic contract — light surface (Cream bg, Carbon text) */
+    --background: 38 50% 96%; /* Cream #FAF6EF */
+    --foreground: 0 0% 4%; /* Carbon #0A0A0A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    /* Splash coral is the brand action color */
+    --primary: 9 100% 61%; /* Splash #FF5436 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 44% 84%; /* Sand #E8DCC4 */
+    --secondary-foreground: 0 0% 4%;
+
+    --muted: 40 30% 90%;
+    --muted-foreground: 0 0% 42%; /* Steel #6B6B6B */
+
+    --accent: 9 100% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 20% 86%;
+    --input: 36 20% 86%;
+    --ring: 9 100% 61%; /* Splash focus ring */
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Carbon surface, Cream text — used by dark sections & the dark logo context */
+    --background: 0 0% 4%; /* Carbon #0A0A0A */
+    --foreground: 38 50% 96%; /* Cream */
+
+    --card: 0 0% 7%;
+    --card-foreground: 38 50% 96%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 38 50% 96%;
+
+    --primary: 9 100% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 38 50% 96%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 71%;
+
+    --accent: 9 100% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 9 100% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-en);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Bilingual font stacks (skill spec). Arabic gets a small upscale for visual balance. */
+  :root {
+    --font-en: var(--font-inter), "Inter", "Söhne", "Helvetica Neue", system-ui,
+      sans-serif;
+    --font-ar: "Tahoma", "GE SS", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  }
+
+  [dir="rtl"] body {
+    font-family: var(--font-ar);
+    font-size: 1.05em;
+  }
+
+  /* Keyboard-only focus rings (never remove outline without replacement). */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Numerals align in tables/stat bars. */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Respect reduced-motion globally: kill transforms/transitions/animations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

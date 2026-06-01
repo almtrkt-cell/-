@@ -1,0 +1,30 @@
+{
+  "site": {
+    "name": "WABEL",
+    "tagline": "A Flood of Results. Not Just Ads.",
+    "description": "WABEL is a Saudi, AI-powered marketing agency. We blend machine intelligence with Saudi creative instinct to turn ad spend into measurable growth."
+  },
+  "nav": {
+    "services": "Services",
+    "method": "Method",
+    "process": "Process",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "audit": "Free AI Audit",
+    "cta": "Book a free consultation"
+  },
+  "languageToggle": {
+    "label": "Switch language",
+    "toArabic": "التبديل إلى العربية",
+    "toEnglish": "Switch to English"
+  },
+  "hero": {
+    "title": "A Flood of Results. Not Just Ads.",
+    "subtitle": "A Saudi, AI-powered marketing agency built for Vision 2030 ambition.",
+    "cta": "Book a free consultation"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeIn": "Designed and built in Saudi Arabia."
+  }
+}
