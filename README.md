@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WABEL — وابل
 
-## Getting Started
+A bilingual (Arabic RTL + English LTR), AI-powered marketing agency website for the Saudi market.
 
-First, run the development server:
+**Tagline:** وابلٌ من النتائج. لا مجرد إعلانات. — _A Flood of Results. Not Just Ads._
+
+Built with **Next.js 14** (App Router), **TypeScript**, **Tailwind CSS v3**, **shadcn/ui**, **lucide-react**, and **framer-motion**. The lead-magnet **AI Marketing Audit** runs on the **Claude API**.
+
+---
+
+## Features
+
+- 🌐 **Bilingual & RTL-first** — route-based locales (`/ar`, `/en`) with Arabic as default, middleware negotiation, and a persistent language toggle.
+- 🎨 **WABEL design system** — brand tokens (Carbon, Splash, Cream, Sand, Steel), bilingual font stacks, and a custom logo (full / mark / wordmark, light + dark).
+- 🧱 **Full landing page** — hero, stats, 7 services, AI + Human methodology, 5-step process, 3-tier pricing, audit CTA, accessible contact form, footer.
+- 🤖 **AI Marketing Audit** (`/audit`) — fetches a visitor's site, extracts signals, and uses Claude (structured outputs) to score SEO, brand clarity, CTAs, and mobile, plus 5 prioritized fixes — in the visitor's language.
+- ♿ **Accessibility & performance** — semantic HTML, `:focus-visible`, `prefers-reduced-motion`, skip link, `Intl` formatting, self-hosted fonts.
+- 🔍 **SEO** — sitemap, robots, bilingual metadata + hreflang, Organization/WebSite JSON-LD, and dynamic OG images.
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- **Node.js 18.17+** (Node 20 or 22 LTS recommended) and npm.
+
+### Install & run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # then fill in your keys
+npm run dev                  # http://localhost:3000  (redirects to /ar)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script          | Description                |
+| --------------- | -------------------------- |
+| `npm run dev`   | Start the dev server       |
+| `npm run build` | Production build           |
+| `npm run start` | Serve the production build |
+| `npm run lint`  | Run ESLint                 |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` → `.env.local` and set:
 
-## Learn More
+| Variable               | Required     | Purpose                                                                                   |
+| ---------------------- | ------------ | ----------------------------------------------------------------------------------------- |
+| `ANTHROPIC_API_KEY`    | for `/audit` | Claude API key — get one at console.anthropic.com.                                         |
+| `ANTHROPIC_MODEL`      | optional     | Audit model. Default `claude-opus-4-7`; use `claude-haiku-4-5` for a cheaper lead magnet. |
+| `NEXT_PUBLIC_SITE_URL` | optional     | Canonical URL for SEO/OG. Default `https://wabel.sa`.                                      |
 
-To learn more about Next.js, take a look at the following resources:
+> The audit works without a key for everything except the AI call — without `ANTHROPIC_API_KEY` the endpoint returns a clear "not configured" error.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```
+app/
+  [lang]/                 # locale segment (ar | en) — root layout lives here
+    layout.tsx            # <html lang dir>, fonts, metadata, JSON-LD
+    page.tsx              # landing page
+    audit/                # AI audit form + results
+    opengraph-image.tsx   # dynamic OG image per locale
+  api/
+    audit/route.ts        # AI audit endpoint (fetch -> extract -> Claude)
+    contact/route.ts      # contact form endpoint
+  sitemap.ts  robots.ts   # SEO routes
+components/
+  Logo.tsx  LanguageToggle.tsx  Reveal.tsx  SectionHeading.tsx
+  sections/               # Header, Hero, Services, Pricing, Contact, Footer, ...
+  audit/                  # AuditForm, AuditResults
+  ui/                     # shadcn/ui primitives
+content/{ar,en}/          # all copy — real bilingual content
+lib/                      # i18n, dictionaries, audit, leads, validation, site
+middleware.ts             # locale redirect / negotiation
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All user-facing copy lives in `content/ar/common.json` and `content/en/common.json` — keep both in sync (they share one TypeScript shape).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Notes & TODO
+
+- **Leads** are appended to a JSON file (`lib/leads.ts`) — fine for local/dev, but ephemeral on serverless. Swap for a DB (Vercel KV/Postgres) or a CRM/email integration before relying on it.
+- **Rate limiting** (`lib/rate-limit.ts`) is in-memory (3 audits/IP/day) — replace with Upstash/Redis for multi-instance correctness.
+- **Emailing the audit PDF** is intentionally left as a future integration.
+
+---
+
+## Deployment
+
+See **[DEPLOYMENT.md](./DEPLOYMENT.md)** for the full Vercel walkthrough (GitHub, `wabel.sa` domain, env vars, Analytics).
+
+---
+
+Designed and built in Saudi Arabia. 🇸🇦

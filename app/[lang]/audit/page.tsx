@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
+import { siteUrl } from "@/lib/site";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { AuditForm } from "@/components/audit/AuditForm";
@@ -16,6 +17,14 @@ export async function generateMetadata({
   return {
     title: dict.auditTool.title,
     description: dict.auditTool.subtitle,
+    alternates: {
+      canonical: `${siteUrl}/${lang}/audit`,
+      languages: {
+        ar: `${siteUrl}/ar/audit`,
+        en: `${siteUrl}/en/audit`,
+        "x-default": `${siteUrl}/ar/audit`,
+      },
+    },
   };
 }
 

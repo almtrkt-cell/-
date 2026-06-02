@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/lib/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
+import { siteUrl } from "@/lib/site";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { StatsBar } from "@/components/sections/StatsBar";
@@ -10,6 +12,24 @@ import { Pricing } from "@/components/sections/Pricing";
 import { AuditCTA } from "@/components/sections/AuditCTA";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string };
+}): Promise<Metadata> {
+  const lang: Locale = isLocale(params.lang) ? params.lang : "ar";
+  return {
+    alternates: {
+      canonical: `${siteUrl}/${lang}`,
+      languages: {
+        ar: `${siteUrl}/ar`,
+        en: `${siteUrl}/en`,
+        "x-default": `${siteUrl}/ar`,
+      },
+    },
+  };
+}
 
 export default async function HomePage({
   params,
