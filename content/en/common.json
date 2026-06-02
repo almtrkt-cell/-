@@ -193,6 +193,76 @@
     "cta": "Run my free AI audit",
     "note": "Takes about two minutes. We'll email you the full report."
   },
+  "auditTool": {
+    "badge": "Free AI Marketing Audit",
+    "title": "Get an AI marketing audit of your website",
+    "subtitle": "Paste your URL and our AI reviews your SEO, brand clarity, calls to action, and mobile experience — then hands you five fixes you can act on today.",
+    "form": {
+      "urlLabel": "Your website URL",
+      "urlPlaceholder": "https://yourcompany.com",
+      "urlError": "Please enter a valid website URL (including https://).",
+      "emailLabel": "Email for your report",
+      "emailPlaceholder": "you@company.com",
+      "emailHint": "We'll send your full audit here. No spam.",
+      "emailError": "Please enter a valid email.",
+      "submit": "Run my free audit",
+      "submitting": "Analyzing your site…",
+      "consent": "By running an audit you agree to be contacted about your results."
+    },
+    "loading": {
+      "title": "Pouring over your website…",
+      "steps": [
+        "Fetching your page",
+        "Reading your content and structure",
+        "Scoring SEO and discoverability",
+        "Checking brand clarity and CTAs",
+        "Writing your recommendations"
+      ]
+    },
+    "errors": {
+      "rate_limited": "You've reached the free limit of 3 audits today. Please try again tomorrow.",
+      "generic": "Something went wrong running your audit. Please try again."
+    },
+    "results": {
+      "eyebrow": "Your AI marketing audit",
+      "overallLabel": "Overall score",
+      "outOf": "/ 100",
+      "auditedLabel": "Audited",
+      "categoriesTitle": "Scorecard",
+      "categories": {
+        "seo": "SEO & discoverability",
+        "brandClarity": "Brand clarity",
+        "cta": "Calls to action",
+        "mobile": "Mobile & speed"
+      },
+      "strengthsTitle": "What's working",
+      "recommendationsTitle": "Your 5 priority fixes",
+      "impact": { "high": "High impact", "medium": "Medium impact", "low": "Low impact" },
+      "signalsTitle": "What we looked at",
+      "signals": {
+        "title": "Title tag",
+        "description": "Meta description",
+        "headings": "Headings",
+        "words": "Words of copy",
+        "images": "Images",
+        "viewport": "Mobile viewport",
+        "https": "HTTPS",
+        "present": "Present",
+        "missing": "Missing",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "newAudit": "Audit another site",
+      "ctaTitle": "Want the full strategy behind these fixes?",
+      "ctaSubtitle": "This audit is the surface. Let's build the plan that turns it into growth.",
+      "ctaButton": "Get your full marketing strategy"
+    },
+    "empty": {
+      "title": "No audit to show yet",
+      "subtitle": "Run a free audit and your results will appear here.",
+      "cta": "Run a free audit"
+    }
+  },
   "contact": {
     "heading": "Let's talk growth",
     "subheading": "Tell us where you want to go. We'll come back within one business day with a plan to get there.",
