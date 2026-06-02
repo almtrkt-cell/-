@@ -2,7 +2,7 @@
   "site": {
     "name": "WABEL",
     "tagline": "A Flood of Results. Not Just Ads.",
-    "description": "WABEL is a Saudi, AI-powered marketing agency. We blend machine intelligence with Saudi creative instinct to turn ad spend into measurable growth."
+    "description": "WABEL is a Saudi, AI-powered marketing agency. We pair machine intelligence with Saudi creative instinct to turn ad spend into measurable growth across the Kingdom and the Gulf."
   },
   "nav": {
     "services": "Services",
@@ -11,7 +11,9 @@
     "pricing": "Pricing",
     "contact": "Contact",
     "audit": "Free AI Audit",
-    "cta": "Book a free consultation"
+    "cta": "Book a free consultation",
+    "menu": "Open menu",
+    "close": "Close menu"
   },
   "languageToggle": {
     "label": "Switch language",
@@ -19,11 +21,210 @@
     "toEnglish": "Switch to English"
   },
   "hero": {
+    "badge": "Saudi · AI-powered marketing",
     "title": "A Flood of Results. Not Just Ads.",
-    "subtitle": "A Saudi, AI-powered marketing agency built for Vision 2030 ambition.",
-    "cta": "Book a free consultation"
+    "subtitle": "WABEL is a Saudi marketing agency built for Vision 2030 ambition. We combine AI precision with local creative instinct so every riyal you spend comes back as growth you can measure.",
+    "cta": "Book a free consultation",
+    "secondaryCta": "Get a free AI audit"
+  },
+  "stats": {
+    "items": [
+      { "value": "3", "label": "Saudi founders, one obsession: your ROI" },
+      { "value": "AI", "label": "Every campaign is AI-powered, human-perfected" },
+      { "value": "7", "label": "Core services under one roof" }
+    ]
+  },
+  "services": {
+    "heading": "Everything your brand needs to win",
+    "subheading": "Seven services, one integrated team. No hand-offs, no agencies blaming each other — just one partner accountable for the result.",
+    "items": [
+      {
+        "id": "digital-marketing",
+        "title": "Digital Marketing",
+        "description": "Always-on strategy across social, search, and content — engineered around the numbers that actually move your business."
+      },
+      {
+        "id": "paid-ads",
+        "title": "Advertising Campaigns",
+        "description": "Performance ads on Google, Meta, TikTok, and Snapchat, tuned daily by AI and watched by people who know the Saudi audience."
+      },
+      {
+        "id": "tech-systems",
+        "title": "Tech Systems",
+        "description": "CRMs, automations, dashboards, and integrations that connect your marketing to your revenue in real time."
+      },
+      {
+        "id": "web-dev",
+        "title": "Web Development",
+        "description": "Fast, bilingual, conversion-first websites built on modern stacks — Arabic-first and ready for scale."
+      },
+      {
+        "id": "app-dev",
+        "title": "App Development",
+        "description": "iOS and Android products your customers actually keep on their home screen, from prototype to App Store."
+      },
+      {
+        "id": "branding",
+        "title": "Branding",
+        "description": "Bilingual identities with real Saudi character — logos, voice, and systems that look premium everywhere."
+      },
+      {
+        "id": "media",
+        "title": "Media Production",
+        "description": "Photography and video that stop the scroll — shot, edited, and localized for the platforms your audience lives on."
+      }
+    ]
+  },
+  "methodology": {
+    "heading": "AI speed. Human judgment.",
+    "subheading": "Tools alone don't grow brands, and gut feel doesn't scale. WABEL runs on both — deliberately.",
+    "ai": {
+      "title": "What AI does",
+      "points": [
+        "Analyzes thousands of data points to find what's working — and kills what isn't, fast",
+        "Generates and tests dozens of ad variants while competitors are still in a meeting",
+        "Predicts spend, demand, and seasonality so budgets land where they pay off",
+        "Reports in real time — no waiting until month-end to learn you overspent"
+      ]
+    },
+    "human": {
+      "title": "What people do",
+      "points": [
+        "Translate culture, dialect, and timing the way only Saudis can",
+        "Set the strategy and the story the machine optimizes toward",
+        "Protect the brand so growth never comes at the cost of taste",
+        "Stay accountable — a named team you can call, not a ticket queue"
+      ]
+    }
+  },
+  "process": {
+    "heading": "How we work",
+    "subheading": "A clear five-step loop. You always know what's happening and why.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery",
+        "description": "We learn your market, margins, and goals — then audit everything you're running today."
+      },
+      {
+        "number": "02",
+        "title": "Strategy",
+        "description": "A data-backed plan with clear KPIs, channels, and a budget tied to outcomes, not vanity metrics."
+      },
+      {
+        "number": "03",
+        "title": "Execution",
+        "description": "Campaigns, creative, and systems go live — built fast, launched clean, instrumented to learn."
+      },
+      {
+        "number": "04",
+        "title": "Measurement",
+        "description": "Live dashboards show exactly what each riyal returns. No black boxes, no surprises."
+      },
+      {
+        "number": "05",
+        "title": "Optimization",
+        "description": "We double down on winners, cut the rest, and compound results month over month."
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Plans that scale with you",
+    "subheading": "Monthly retainers, no long lock-ins. Start where you are; pour on more when you're ready.",
+    "currency": "SAR",
+    "period": "/ month",
+    "popularLabel": "Most popular",
+    "ctaLabel": "Start with this plan",
+    "tiers": [
+      {
+        "id": "spark",
+        "name": "Spark",
+        "price": 5000,
+        "priceSuffix": "",
+        "description": "For ambitious brands lighting the first fire.",
+        "features": [
+          "One core channel, managed end-to-end",
+          "AI campaign setup and weekly optimization",
+          "Monthly performance dashboard",
+          "Email and WhatsApp support"
+        ]
+      },
+      {
+        "id": "flood",
+        "name": "Flood",
+        "price": 15000,
+        "priceSuffix": "",
+        "description": "For growing teams ready for serious momentum.",
+        "features": [
+          "Up to three integrated channels",
+          "Dedicated strategist + creative production",
+          "Custom dashboards and bi-weekly reviews",
+          "Landing pages and conversion optimization",
+          "Priority support, same-day response"
+        ]
+      },
+      {
+        "id": "tsunami",
+        "name": "Tsunami",
+        "price": 35000,
+        "priceSuffix": "+",
+        "description": "For market leaders who want to own the category.",
+        "features": [
+          "Full-funnel, all-channel growth engine",
+          "Senior team, custom tech and automations",
+          "Web and app development included",
+          "Weekly war-room and executive reporting",
+          "A growth partner, not a vendor"
+        ]
+      }
+    ]
+  },
+  "audit": {
+    "badge": "Free, no commitment",
+    "heading": "See what your marketing is leaving on the table",
+    "subheading": "Drop in your website and our AI returns a premium marketing audit in minutes — SEO, brand clarity, CTAs, and mobile, with five fixes you can act on today.",
+    "bullets": [
+      "SEO and discoverability score",
+      "Brand clarity and messaging read",
+      "Conversion and CTA effectiveness",
+      "Mobile and speed health check",
+      "Five specific, prioritized recommendations"
+    ],
+    "cta": "Run my free AI audit",
+    "note": "Takes about two minutes. We'll email you the full report."
+  },
+  "contact": {
+    "heading": "Let's talk growth",
+    "subheading": "Tell us where you want to go. We'll come back within one business day with a plan to get there.",
+    "form": {
+      "name": { "label": "Full name", "placeholder": "e.g. Saud Al-Qahtani", "error": "Please enter your name." },
+      "email": { "label": "Email", "placeholder": "you@company.com", "error": "Please enter a valid email." },
+      "phone": { "label": "Phone", "placeholder": "5X XXX XXXX", "hint": "Saudi mobile, e.g. +966 5X XXX XXXX", "error": "Please enter a valid Saudi mobile number." },
+      "company": { "label": "Company", "placeholder": "Your company or brand" },
+      "service": { "label": "What do you need?", "placeholder": "Select a service" },
+      "message": { "label": "Tell us about your project", "placeholder": "A few lines about your goals…", "error": "Please add a short message." },
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Got it — we'll be in touch within one business day. Shukran!",
+      "errorGeneric": "Something went wrong. Please try again or email us directly."
+    }
   },
   "footer": {
+    "tagline": "A Saudi, AI-powered marketing agency. A flood of results — not just ads.",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "companyLinks": [
+      { "label": "Method", "href": "#method" },
+      { "label": "Process", "href": "#process" },
+      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Free AI Audit", "href": "/audit" }
+    ],
+    "social": [
+      { "label": "X (Twitter)", "id": "x", "href": "https://x.com/wabel" },
+      { "label": "Instagram", "id": "instagram", "href": "https://instagram.com/wabel" },
+      { "label": "LinkedIn", "id": "linkedin", "href": "https://linkedin.com/company/wabel" },
+      { "label": "TikTok", "id": "tiktok", "href": "https://tiktok.com/@wabel" }
+    ],
     "rights": "All rights reserved.",
     "madeIn": "Designed and built in Saudi Arabia."
   }

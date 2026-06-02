@@ -1,8 +1,15 @@
 import { getDictionary } from "@/lib/dictionaries";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/Logo";
-import { LanguageToggle } from "@/components/LanguageToggle";
+import { Header } from "@/components/sections/Header";
+import { Hero } from "@/components/sections/Hero";
+import { StatsBar } from "@/components/sections/StatsBar";
+import { Services } from "@/components/sections/Services";
+import { Methodology } from "@/components/sections/Methodology";
+import { Process } from "@/components/sections/Process";
+import { Pricing } from "@/components/sections/Pricing";
+import { AuditCTA } from "@/components/sections/AuditCTA";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/sections/Footer";
 
 export default async function HomePage({
   params,
@@ -11,39 +18,62 @@ export default async function HomePage({
 }) {
   const lang: Locale = isLocale(params.lang) ? params.lang : "ar";
   const dict = await getDictionary(lang);
+  const serviceTitles = dict.services.items.map((s) => s.title);
 
   return (
-    <div className="min-h-dvh">
-      <header className="container flex items-center justify-between py-5">
-        <Logo variant="full" mode="light" size={28} />
-        <LanguageToggle locale={lang} />
-      </header>
-
-      <main className="container flex flex-col items-center justify-center gap-8 py-20 text-center sm:py-28">
-        <span className="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-1.5 text-sm font-medium text-carbon">
-          <span className="h-2 w-2 rounded-full bg-splash" aria-hidden="true" />
-          {dict.site.name}
-        </span>
-        <h1 className="max-w-3xl text-balance text-4xl font-bold leading-tight text-carbon sm:text-5xl md:text-6xl">
-          {dict.hero.title}
-        </h1>
-        <p className="max-w-xl text-pretty text-lg text-steel">
-          {dict.hero.subtitle}
-        </p>
-        <Button size="lg">{dict.hero.cta}</Button>
-
-        {/* Phase 2 verification: logo variants in both light and dark contexts. */}
-        <section className="mt-12 grid w-full max-w-2xl gap-4 sm:grid-cols-2">
-          <div className="flex flex-col items-center gap-4 rounded-2xl bg-cream p-8 shadow-soft">
-            <Logo variant="mark" mode="light" size={44} />
-            <Logo variant="wordmark" mode="light" size={26} />
-          </div>
-          <div className="flex flex-col items-center gap-4 rounded-2xl bg-carbon p-8">
-            <Logo variant="mark" mode="dark" size={44} />
-            <Logo variant="wordmark" mode="dark" size={26} />
-          </div>
-        </section>
+    <>
+      <Header locale={lang} nav={dict.nav} />
+      <main id="main">
+        <Hero locale={lang} dict={dict.hero} />
+        <StatsBar items={dict.stats.items} />
+        <Services
+          heading={dict.services.heading}
+          subheading={dict.services.subheading}
+          items={dict.services.items}
+        />
+        <Methodology
+          heading={dict.methodology.heading}
+          subheading={dict.methodology.subheading}
+          ai={dict.methodology.ai}
+          human={dict.methodology.human}
+        />
+        <Process
+          heading={dict.process.heading}
+          subheading={dict.process.subheading}
+          steps={dict.process.steps}
+        />
+        <Pricing
+          locale={lang}
+          heading={dict.pricing.heading}
+          subheading={dict.pricing.subheading}
+          currency={dict.pricing.currency}
+          period={dict.pricing.period}
+          popularLabel={dict.pricing.popularLabel}
+          ctaLabel={dict.pricing.ctaLabel}
+          tiers={dict.pricing.tiers}
+        />
+        <AuditCTA
+          locale={lang}
+          badge={dict.audit.badge}
+          heading={dict.audit.heading}
+          subheading={dict.audit.subheading}
+          bullets={dict.audit.bullets}
+          cta={dict.audit.cta}
+          note={dict.audit.note}
+        />
+        <Contact
+          heading={dict.contact.heading}
+          subheading={dict.contact.subheading}
+          form={dict.contact.form}
+          services={serviceTitles}
+        />
+        <Footer
+          locale={lang}
+          siteName={dict.site.name}
+          services={dict.services.items}
+          dict={dict.footer}
+        />
       </main>
-    </div>
+    </>
   );
 }
