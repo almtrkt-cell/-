@@ -20,17 +20,6 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  async redirects() {
-    return [
-      {
-        // Curve Spa brand book (static page in /public) — extensionless URL
-        // must resolve before the locale middleware rewrites it.
-        source: "/curve-spa",
-        destination: "/curve-spa/index.html",
-        permanent: false,
-      },
-    ];
-  },
   async headers() {
     return [
       {
