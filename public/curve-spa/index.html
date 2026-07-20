@@ -374,16 +374,16 @@ a{color:#CBA96E;text-decoration:none}a:hover{color:#F5F1EA}
 <div style="direction:rtl"><div style="position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(16,27,35,.9),rgba(16,27,35,.95)),url(&quot;assets/img-02.jpg&quot;) center/cover no-repeat"></div><style>
 .steam-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 .steam-wisp{position:absolute;bottom:-34vh;border-radius:50%;
-  background:radial-gradient(closest-side, rgba(245,241,234,.11), rgba(216,204,188,.055) 55%, transparent 76%);
-  filter:blur(26px);will-change:transform,opacity;opacity:0;
+  background:radial-gradient(closest-side, rgba(245,241,234,.17), rgba(216,204,188,.09) 55%, transparent 76%);
+  filter:blur(22px);will-change:transform,opacity;opacity:0;
   animation:steamRise linear infinite}
 .steam-glow{position:absolute;inset-inline:0;bottom:-22vh;height:64vh;
-  background:radial-gradient(62% 100% at 50% 100%, rgba(176,141,87,.15), transparent 72%);
-  animation:glowBreathe 9s ease-in-out infinite alternate}
+  background:radial-gradient(62% 100% at 50% 100%, rgba(176,141,87,.18), transparent 72%);
+  animation:glowBreathe 6.5s ease-in-out infinite alternate}
 @keyframes steamRise{
   0%{transform:translate3d(0,14vh,0) scale(.82);opacity:0}
-  14%{opacity:.85}
-  62%{opacity:.5}
+  12%{opacity:1}
+  62%{opacity:.62}
   100%{transform:translate3d(var(--sway,6vw),-120vh,0) scale(1.5);opacity:0}}
 @keyframes glowBreathe{from{opacity:.55}to{opacity:1}}
 @media (prefers-reduced-motion: reduce){
@@ -392,11 +392,11 @@ a{color:#CBA96E;text-decoration:none}a:hover{color:#F5F1EA}
 </style>
 <div class="steam-layer" aria-hidden="true">
   <div class="steam-glow"></div>
-  <div class="steam-wisp" style="left:4%;width:46vmin;height:46vmin;--sway:7vw;animation-duration:34s;animation-delay:-6s"></div>
-  <div class="steam-wisp" style="left:26%;width:34vmin;height:34vmin;--sway:-5vw;animation-duration:27s;animation-delay:-18s"></div>
-  <div class="steam-wisp" style="left:48%;width:56vmin;height:56vmin;--sway:4vw;animation-duration:42s;animation-delay:-12s"></div>
-  <div class="steam-wisp" style="left:66%;width:38vmin;height:38vmin;--sway:-8vw;animation-duration:30s;animation-delay:-24s"></div>
-  <div class="steam-wisp" style="left:82%;width:48vmin;height:48vmin;--sway:6vw;animation-duration:38s;animation-delay:-30s"></div>
+  <div class="steam-wisp" style="left:4%;width:46vmin;height:46vmin;--sway:7vw;animation-duration:21s;animation-delay:-6s"></div>
+  <div class="steam-wisp" style="left:26%;width:34vmin;height:34vmin;--sway:-5vw;animation-duration:16s;animation-delay:-11s"></div>
+  <div class="steam-wisp" style="left:48%;width:56vmin;height:56vmin;--sway:4vw;animation-duration:26s;animation-delay:-9s"></div>
+  <div class="steam-wisp" style="left:66%;width:38vmin;height:38vmin;--sway:-8vw;animation-duration:18s;animation-delay:-14s"></div>
+  <div class="steam-wisp" style="left:82%;width:48vmin;height:48vmin;--sway:6vw;animation-duration:23s;animation-delay:-17s"></div>
 </div>
 <div style="position:relative;z-index:1">
 <section data-screen-label="الغلاف" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px;position:relative;background:radial-gradient(1100px 640px at 50% 118%, rgba(57,82,97,.5), transparent)">
