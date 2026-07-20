@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>window.__resources = {
+  "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "assets/react.production.min.js",
+  "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/react-dom.production.min.js"
+};</script>
+<script src="assets/app-01.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>كيرف سبا — دليل الهوية v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* arabic */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/font-01.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/font-02.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-03.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-04.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-05.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-06.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-07.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-08.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-09.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-10.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-11.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-12.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-14.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-15.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-16.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-17.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-14.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-15.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-16.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-17.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-13.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-14.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-15.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-16.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-17.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("assets/font-18.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("assets/font-19.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/font-20.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/font-21.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-22.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-23.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-24.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-25.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-26.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/font-27.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/font-28.woff2") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* latin */
+@font-face {
+  font-family: 'Zain';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/font-29.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+html{scroll-behavior:smooth;direction:rtl}
+body{margin:0;background:#101B23;color:#F5F1EA;font-family:'Almarai',sans-serif;line-height:2;-webkit-font-smoothing:antialiased}
+a{color:#CBA96E;text-decoration:none}a:hover{color:#F5F1EA}
+</style>
+</helmet>
+<div style="direction:rtl"><div style="position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(16,27,35,.9),rgba(16,27,35,.95)),url(&quot;assets/img-02.jpg&quot;) center/cover no-repeat"></div><style>
+.steam-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.steam-wisp{position:absolute;bottom:-34vh;border-radius:50%;
+  background:radial-gradient(closest-side, rgba(245,241,234,.17), rgba(216,204,188,.09) 55%, transparent 76%);
+  filter:blur(22px);will-change:transform,opacity;opacity:0;
+  animation:steamRise linear infinite}
+.steam-glow{position:absolute;inset-inline:0;bottom:-22vh;height:64vh;
+  background:radial-gradient(62% 100% at 50% 100%, rgba(176,141,87,.18), transparent 72%);
+  animation:glowBreathe 6.5s ease-in-out infinite alternate}
+@keyframes steamRise{
+  0%{transform:translate3d(0,14vh,0) scale(.82);opacity:0}
+  12%{opacity:1}
+  62%{opacity:.62}
+  100%{transform:translate3d(var(--sway,6vw),-120vh,0) scale(1.5);opacity:0}}
+@keyframes glowBreathe{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .steam-wisp{animation:none;opacity:.22;transform:translate3d(0,-30vh,0)}
+  .steam-glow{animation:none;opacity:.8}}
+</style>
+<div class="steam-layer" aria-hidden="true">
+  <div class="steam-glow"></div>
+  <div class="steam-wisp" style="left:4%;width:46vmin;height:46vmin;--sway:7vw;animation-duration:21s;animation-delay:-6s"></div>
+  <div class="steam-wisp" style="left:26%;width:34vmin;height:34vmin;--sway:-5vw;animation-duration:16s;animation-delay:-11s"></div>
+  <div class="steam-wisp" style="left:48%;width:56vmin;height:56vmin;--sway:4vw;animation-duration:26s;animation-delay:-9s"></div>
+  <div class="steam-wisp" style="left:66%;width:38vmin;height:38vmin;--sway:-8vw;animation-duration:18s;animation-delay:-14s"></div>
+  <div class="steam-wisp" style="left:82%;width:48vmin;height:48vmin;--sway:6vw;animation-duration:23s;animation-delay:-17s"></div>
+</div>
+<div style="position:relative;z-index:1">
+<section data-screen-label="الغلاف" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px;position:relative;background:radial-gradient(1100px 640px at 50% 118%, rgba(57,82,97,.5), transparent)">
+  <div style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.55em;color:#B08D57;text-transform:uppercase">Brand Book — MMXXVI</div>
+  <div style="width:1px;height:56px;background:linear-gradient(#B08D57,transparent);margin:26px 0"></div>
+  <img src="assets/img-15.png" alt="كيرف سبا" style="width:min(480px,78vw)">
+  <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(30px,5vw,54px);color:#D8CCBC;margin-top:34px;line-height:1.5">هنا… <b style="font-weight:800;color:#F5F1EA">ينحني التعب</b></div>
+  <div style="font-family:'Great Vibes',cursive;font-size:clamp(22px,3vw,32px);color:#B08D57;margin-top:4px">Where tension bends</div>
+  <div style="color:#8FA6B2;font-size:13px;letter-spacing:.12em;margin-top:30px">دليل استراتيجية العلامة والهوية البصرية · الإصدار الثاني · الرياض</div>
+  <svg sc-camel-view-box="0 0 1440 120" sc-camel-preserve-aspect-ratio="none" height="110" style="position:absolute;inset-inline:0;bottom:0;opacity:.55;pointer-events:none">
+    <path d="M0,70 C240,20 360,110 600,70 C840,30 1000,100 1440,50" fill="none" stroke="#B08D57" stroke-width="1.4" opacity=".8"></path>
+    <path d="M0,92 C260,44 420,118 660,86 C900,52 1080,112 1440,72" fill="none" stroke="#8FA6B2" stroke-width="1" opacity=".4"></path>
+  </svg>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section data-screen-label="الفهرس" style="max-width:1040px;margin:0 auto;padding:120px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">Contents</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(30px,4.5vw,46px);margin:10px 0 54px;line-height:1.5">فصول <b style="font-weight:800">الدليل</b></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:1px solid rgba(143,166,178,.15)">
+    <a href="#strategy" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">01</span>استراتيجية العلامة</a>
+    <a href="#identity" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">02</span>الشعار والألوان والخطوط</a>
+    <a href="#line" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">03</span>الخط الحي والتصوير</a>
+    <a href="#apps" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">04</span>التطبيقات والمطبوعات</a>
+    <a href="#social" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">05</span>هوية السوشيال ميديا</a>
+    <a href="#logoplace" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">05.ب</span>اللوقو في المحتوى</a>
+    <a href="#senses" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">06</span>الهوية الحسّية</a>
+    <a href="#future" style="display:block;padding:26px 20px;border-bottom:1px solid rgba(143,166,178,.15);color:#F5F1EA" style-hover="background:rgba(57,82,97,.25)"><span style="display:block;color:#B08D57;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.35em">07</span>معمارية العلامة</a>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="strategy" data-screen-label="01 الاستراتيجية" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">01 — Brand Strategy</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">جوهر <b style="font-weight:800">العلامة</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 64px;font-size:16px">كل شيء في كيرف سبا يخرج من جملة واحدة. أي تصميم أو منشور أو قرار لا يخدمها — لا مكان له.</p>
+  <div style="text-align:center;padding:70px 36px;border-block:1px solid rgba(176,141,87,.35);position:relative">
+    <div style="font-family:'Great Vibes',cursive;font-size:30px;color:#B08D57;opacity:.85">essence</div>
+    <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:clamp(38px,6.5vw,72px);line-height:1.4;background:linear-gradient(120deg,#F5F1EA,#8FA6B2);-webkit-background-clip:text;background-clip:text;color:transparent">فخامة تفهم جسدك</div>
+    <p style="color:#8FA6B2;max-width:620px;margin:18px auto 0">السوق فيه أماكن للدلال، وأماكن رخيصة. كيرف يقف في المكان الفارغ بينهما: <b style="color:#D8CCBC">جميع أنواع المساج، بأيدي أخصائيين يفهمون الجسم والألم، داخل أجواء فخمة هادئة.</b></p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:44px;margin-top:70px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">الرسالة</div><p style="color:#8FA6B2;margin:0;font-size:15px">نعيد للرجل توازنه: جلسات يقودها أخصائيون يفهمون العضلة والعصب ومصدر الألم — في مكان صُمم ليُسكِت ضجيج الرياض من أول خطوة.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">الرؤية</div><p style="color:#8FA6B2;margin:0;font-size:15px">أن تصبح كيرف الشبكة الأولى في السعودية للسبا الرجالي الاحترافي — فروع في كل مدينة رئيسية، ومنتجات تحمل اسمنا في بيوت عملائنا.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">الوعد</div><p style="color:#8FA6B2;margin:0;font-size:15px">تدخل محمَّلًا بيومك… وتخرج أخف. عميل يحس بالفرق من أول جلسة، ويرجع لأن أحدًا لم يفهم جسده مثلنا.</p></div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:30px;margin:90px 0 30px;text-align:center">القيم <b style="font-weight:800">الأربع</b></h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:1px solid rgba(143,166,178,.15)">
+    <div style="padding:30px 24px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:19px">الإتقان قبل الإبهار</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">أخصائي يعرف ماذا يفعل بظهرك أهم من ثريا فخمة. نستثمر في الأيدي قبل الجدران.</p></div>
+    <div style="padding:30px 24px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:19px">الهدوء صناعة</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">إضاءة، صوت، عطر، إيقاع خدمة — كل تفصيلة محسوبة لتخفض نبضك درجة.</p></div>
+    <div style="padding:30px 24px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:19px">خصوصية رجالية</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">مكان صُمم للرجل من البداية — خصوصية تامة، وضيافة سعودية بمقام عالٍ.</p></div>
+    <div style="padding:30px 24px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:19px">اتساق لا يهتز</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">نفس التجربة في كل زيارة وكل فرع وكل منتج — الاتساق يحوّل المحل إلى علامة.</p></div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:30px;margin:90px 0 22px;text-align:center">نبرة <b style="font-weight:800">الصوت</b> — الخبير الهادئ</h3>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 34px;font-size:15px">لو كان كيرف رجلًا: خبير واثق بلا استعراض، يستقبلك بدفء، يسألك سؤالين دقيقين عن جسدك، ثم يقول: <b style="color:#F5F1EA">«خلّها علينا»</b>.</p>
+  <div style="border:1px solid rgba(143,166,178,.15);border-radius:4px;overflow:hidden">
+    <sc-raw-table style="width:100%;border-collapse:collapse;font-size:14.5px">
+      <sc-raw-tr><sc-raw-th style="color:#CBA96E;font-weight:700;text-align:right;padding:16px;border-bottom:1px solid rgba(176,141,87,.35);font-size:13px">المبدأ</sc-raw-th><sc-raw-th style="color:#CBA96E;font-weight:700;text-align:right;padding:16px;border-bottom:1px solid rgba(176,141,87,.35);font-size:13px">نقول ✓</sc-raw-th><sc-raw-th style="color:#CBA96E;font-weight:700;text-align:right;padding:16px;border-bottom:1px solid rgba(176,141,87,.35);font-size:13px">لا نقول ✗</sc-raw-th></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1)"><b>جُمل قصيرة تتنفس</b></sc-raw-td><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1);color:#a9c9b4">«جسمك يعرف طريقه إلينا.»</sc-raw-td><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1);color:#c98a8a;text-decoration:line-through">«أفخم وأرقى وأفضل سبا…»</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1)"><b>خبرة لا مبالغة</b></sc-raw-td><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1);color:#a9c9b4">«٦٠ دقيقة مع أخصائي يفهم عضلتك.»</sc-raw-td><sc-raw-td style="padding:16px;border-bottom:1px solid rgba(143,166,178,.1);color:#c98a8a;text-decoration:line-through">«أقوى عرض مساج 🔥»</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:16px"><b>نخاطب الجسد</b></sc-raw-td><sc-raw-td style="padding:16px;color:#a9c9b4">«رقبتك تحمل اجتماعات الأسبوع. سلّمها لنا.»</sc-raw-td><sc-raw-td style="padding:16px;color:#c98a8a;text-decoration:line-through">«دلّل نفسك يا قمر»</sc-raw-td></sc-raw-tr>
+    </sc-raw-table>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px;margin-top:80px">
+    <div style="text-align:center"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:20px;color:#F5F1EA">التنفيذي المضغوط</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">٣٠–٥٠ سنة، اجتماعات ورقبة مشدودة. يشتري «إصلاح + هدوء».</p></div>
+    <div style="text-align:center"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:20px;color:#F5F1EA">الرياضي</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">جيم، جري، بادل — استشفاء عضلي منتظم قبل التمرين وبعده.</p></div>
+    <div style="text-align:center"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:20px;color:#F5F1EA">صاحب المناسبة</div><p style="color:#8FA6B2;font-size:14px;margin:8px 0 0">عريس أو مُهدٍ — يشتري «تجربة تليق» وهدية تُذكر.</p></div>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="identity" data-screen-label="02 الهوية البصرية" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">02 — Visual Identity</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">نظام <b style="font-weight:800">الشعار</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 60px;font-size:16px">نحافظ على الشعار الحالي — رمز الانحناء + الاسمين — ونحوّله من «شعار» إلى «نظام» له نسخ وقواعد صارمة.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+    <div><div style="background:#F5F1EA;border-radius:4px;padding:44px;display:flex;align-items:center;justify-content:center;min-height:170px"><img src="assets/img-21.png" style="max-width:100%;max-height:140px"></div><p style="color:#8FA6B2;font-size:13px;margin-top:12px;text-align:center">النسخة الأساسية — على الخلفيات الفاتحة</p></div>
+    <div><div style="background:#101B23;border:1px solid rgba(143,166,178,.18);border-radius:4px;padding:44px;display:flex;align-items:center;justify-content:center;min-height:170px"><img src="assets/img-09.png" style="max-width:100%;max-height:140px"></div><p style="color:#8FA6B2;font-size:13px;margin-top:12px;text-align:center">النسخة البيضاء — على الداكن (الاستخدام الأكثر)</p></div>
+    <div><div style="background:#F5F1EA;border-radius:4px;padding:44px;display:flex;align-items:center;justify-content:center;min-height:170px"><img src="assets/img-01.png" style="max-width:100%;max-height:140px"></div><p style="color:#8FA6B2;font-size:13px;margin-top:12px;text-align:center">القفل العربي بالبترولي — للمطبوعات والمحتوى العربي</p></div>
+    <div><div style="background:#F5F1EA;border-radius:4px;padding:44px;display:flex;align-items:center;justify-content:center;min-height:170px"><img src="assets/img-03.png" style="max-width:100%;max-height:140px"></div><p style="color:#8FA6B2;font-size:13px;margin-top:12px;text-align:center">القفل الإنجليزي — للسياقات اللاتينية</p></div>
+    <div style="grid-column:1/-1"><div style="background:#395261;border-radius:4px;padding:44px;display:flex;align-items:center;justify-content:center;min-height:190px;position:relative;overflow:hidden">
+      <svg sc-camel-view-box="0 0 800 200" style="position:absolute;inset:0;width:100%;height:100%;opacity:.25"><path d="M-10,150 C150,60 300,190 470,110 C620,40 720,140 810,90" fill="none" stroke="#CBA96E" stroke-width="1.6"></path></svg>
+      <img src="assets/img-14.png" style="max-height:120px;position:relative">
+    </div><p style="color:#8FA6B2;font-size:13px;margin-top:12px;text-align:center">الرمز المنفرد — <b style="color:#D8CCBC">علامتنا بلا كلام:</b> البروفايل، الختم على المناشف والأدوات، العلامة المائية، والنقش على المنتجات</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;margin-top:60px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">قواعد لا تُكسر</div>
+      <ul style="list-style:none;padding:0;margin:0;color:#8FA6B2;font-size:14.5px">
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">المساحة الآمنة:</b> فراغ لا يقل عن ارتفاع رمز الانحناء نفسه.</li>
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">الحد الأدنى:</b> ٢٤px للرمز، ١٢٠px للقفل الكامل.</li>
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">ممنوع:</b> التمديد، الإمالة، الظلال، التدرجات، أو صورة مزدحمة بلا تعتيم.</li>
+      </ul>
+    </div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">هرمية الاستخدام</div>
+      <ul style="list-style:none;padding:0;margin:0;color:#8FA6B2;font-size:14.5px">
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">القفل الكامل:</b> الواجهات والأغلفة وأول ظهور.</li>
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">القفل العربي:</b> المحتوى العربي والسوشيال.</li>
+        <li style="margin-bottom:12px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">الرمز المنفرد:</b> البروفايل، الختم، النقش — والعربي دائمًا أولًا.</li>
+      </ul>
+    </div>
+  </div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(28px,4vw,42px);margin:110px 0 16px;line-height:1.5">لوحة <b style="font-weight:800">الألوان</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:620px;margin:0 auto 44px;font-size:15px">مبنية على البترولي الأصلي في الشعار (#395261): ليل الرياض، بخار الجلسة، رمل نجد، ولمسة نحاس من الضيافة.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;border-radius:4px;overflow:hidden">
+    <div style="background:#14212A;height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px"><b style="font-family:'Zain',sans-serif;font-size:16px">ليل</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;color:#8FA6B2">#14212A · 40%</span></div>
+    <div style="background:#395261;height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px"><b style="font-family:'Zain',sans-serif;font-size:16px">بترولي كيرف</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;color:#D8CCBC">#395261 · 25%</span></div>
+    <div style="background:#8FA6B2;height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#14212A"><b style="font-family:'Zain',sans-serif;font-size:16px">بخار</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em">#8FA6B2</span></div>
+    <div style="background:#D8CCBC;height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#14212A"><b style="font-family:'Zain',sans-serif;font-size:16px">رمل</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em">#D8CCBC · 12%</span></div>
+    <div style="background:#F5F1EA;height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#14212A"><b style="font-family:'Zain',sans-serif;font-size:16px">عاج</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em">#F5F1EA · 15%</span></div>
+    <div style="background:linear-gradient(135deg,#B08D57,#CBA96E);height:210px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:#14212A"><b style="font-family:'Zain',sans-serif;font-size:16px">نحاس</b><span style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em">#B08D57 · ≤8%</span></div>
+  </div>
+  <p style="color:#8FA6B2;font-size:13.5px;margin-top:14px;text-align:center">قاعدة النحاس: لا يتجاوز ٨٪ من أي تصميم — النحاس مثل الملح: قليله فخامة وكثيره كارثة.</p>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(28px,4vw,42px);margin:110px 0 44px;line-height:1.5">الخطوط <b style="font-weight:800">الجديدة</b></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px">
+    <div style="border-right:2px solid #B08D57;padding-right:24px">
+      <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">HEADLINES — ZAIN</div>
+      <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:36px;line-height:1.5">هنا ينحني التعب</div>
+      <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:24px;color:#8FA6B2;line-height:1.6">جلسات تفهم جسدك</div>
+      <p style="color:#8FA6B2;font-size:14px;margin-top:14px">للعناوين: خط عربي حديث بشخصية ناعمة الانحناءات تشبه رمز العلامة — Black للعناوين، وExtraLight للجُمل الشاعرية. التباين بين الوزنين هو صوت العلامة البصري.</p>
+    </div>
+    <div style="border-right:2px solid #B08D57;padding-right:24px">
+      <div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">BODY — ALMARAI</div>
+      <div style="font-size:17px">نستقبلك بمشروبنا الخاص، نسألك عن جسدك قبل جدولك، ثم نطفئ عنك ضجيج المدينة ستين دقيقة كاملة.</div>
+      <p style="color:#8FA6B2;font-size:14px;margin-top:14px">للنصوص: واضح وهادئ ويقرأ بارتياح في المنيوهات والموقع. اللاتيني المرافق: <span style="font-family:'Montserrat',sans-serif;letter-spacing:.15em;font-size:13px">MONTSERRAT</span> بتباعد أحرف واسع، ولمسة توقيعية نادرة بخط <span style="font-family:'Great Vibes',cursive;font-size:19px;color:#CBA96E">Great Vibes</span> للكلمات الإنجليزية القصيرة فقط.</p>
+    </div>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="line" data-screen-label="03 الخط الحي" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">03 — The Living Line</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">المنحنى يتحرر <b style="font-weight:800">من الشعار</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 50px;font-size:16px">رمز الانحناء لا يبقى حبيس الزاوية — يصبح خيطًا حيًا يجري في كل الوسائط. قاعدة واحدة: <b style="color:#D8CCBC">في كل تصميم، خط واحد ينحني.</b></p>
+  <svg sc-camel-view-box="0 0 1000 260" style="display:block;width:100%;background:linear-gradient(140deg,#14212A,#1C2E39);border-radius:4px">
+    <path d="M-20,190 C150,70 280,230 450,130 C620,35 700,200 880,105 C960,63 1000,96 1030,80" fill="none" stroke="#B08D57" stroke-width="2.6"></path>
+    <path d="M-20,210 C160,95 300,245 470,152 C640,60 720,218 900,126 C970,92 1010,113 1030,100" fill="none" stroke="#8FA6B2" stroke-width="1.1" opacity=".45"></path>
+  </svg>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px;margin-top:50px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">في المطبوعات</div><p style="color:#8FA6B2;font-size:14px;margin:0">يلتف من ظهر الكرت إلى وجهه، يرسم فاصل المنيو، ويوقّع أسفل الفواتير — بخط نحاسي واحد رفيع.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">في الرقمي</div><p style="color:#8FA6B2;font-size:14px;margin:0">يتحرك كتنفّس بطيء (٤ ثوانٍ شهيق، ٤ زفير): مؤشر التحميل، انتقالات الستوري، وتوقيع نهاية الريلز.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">في المكان</div><p style="color:#8FA6B2;font-size:14px;margin:0">شريط إضاءة نحاسي مخفي يقود العميل من الاستقبال لغرفته — العميل «يمشي داخل الشعار».</p></div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:30px;margin:100px 0 20px;text-align:center">أسلوب <b style="font-weight:800">التصوير</b></h3>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 36px;font-size:15px">إضاءة منخفضة دافئة وظلال عميقة — درجة سيبيا بترولية موحدة كما في المزاج المرجعي. تفاصيل مقرّبة: بخار، حجر، خشب داكن، أيدي أخصائي. الوجوه ساكنة بلا ابتسامات مفتعلة.</p>
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px">
+    <div style="position:relative;height:340px;grid-row:span 2;overflow:hidden;border-radius:4px">
+      <img src="assets/img-16.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.7) 0%,rgba(16,27,35,.1) 40%,rgba(20,33,42,.15))"></div>
+      <div style="position:absolute;bottom:16px;inset-inline:0;text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:14px;color:#F5F1EA">طقس الزيت — إضاءة شموع وظلال عميقة</div>
+    </div>
+    <div style="position:relative;height:166px;overflow:hidden;border-radius:4px">
+      <img src="assets/img-02.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.65),rgba(16,27,35,.05) 55%)"></div>
+      <div style="position:absolute;bottom:10px;inset-inline:0;text-align:center;font-size:11.5px;color:#F5F1EA">بخار وحجر الجلسة</div>
+    </div>
+    <div style="position:relative;height:166px;overflow:hidden;border-radius:4px">
+      <img src="assets/img-18.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.65),rgba(16,27,35,.05) 55%)"></div>
+      <div style="position:absolute;bottom:10px;inset-inline:0;text-align:center;font-size:11.5px;color:#F5F1EA">أيدي أخصائي أثناء العمل</div>
+    </div>
+    <div style="position:relative;height:166px;overflow:hidden;border-radius:4px">
+      <img src="assets/img-04.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.65),rgba(16,27,35,.15) 55%)"></div>
+      <div style="position:absolute;bottom:10px;inset-inline:0;text-align:center;font-size:11.5px;color:#F5F1EA">أدوات التدليك الخشبي</div>
+    </div>
+    <div style="position:relative;height:166px;overflow:hidden;border-radius:4px">
+      <img src="assets/img-05.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.65),rgba(16,27,35,.05) 55%)"></div>
+      <div style="position:absolute;bottom:10px;inset-inline:0;text-align:center;font-size:11.5px;color:#F5F1EA">مشروب الوصول — الضيافة الموقعة</div>
+    </div>
+  </div>
+  <p style="color:#8FA6B2;font-size:13px;margin-top:14px;text-align:center">صور مرجعية للمزاج البصري — تُستبدل بتصوير الفرع الرسمي عند جاهزيته. ممنوع: الزهور، اللوتس، الباستيل، وأي كليشيه سبا نسائي.</p>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="apps" data-screen-label="04 التطبيقات" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">04 — Applications</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">العلامة على <b style="font-weight:800">أرض الواقع</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 56px;font-size:16px">كل قطعة بالنظام نفسه: ليل + بترولي، نحاس شحيح، والخط الحي حاضر دائمًا.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+    <div style="aspect-ratio:1.75;border-radius:10px;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);background:linear-gradient(135deg,#1C2E39,#395261)">
+      <svg sc-camel-view-box="0 0 350 200" style="position:absolute;inset:0;width:100%;height:100%"><path d="M-10,150 C60,90 120,180 200,120 C280,60 320,140 360,100" fill="none" stroke="#B08D57" stroke-width="1.4" opacity=".9"></path></svg>
+      <img src="assets/img-17.png" style="position:absolute;inset:0;margin:auto;max-width:55%;max-height:55%">
+    </div>
+    <div style="aspect-ratio:1.75;border-radius:10px;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);background:#F5F1EA">
+      <svg sc-camel-view-box="0 0 350 200" style="position:absolute;inset:0;width:100%;height:100%"><path d="M-10,60 C70,120 140,30 220,90 C300,150 330,70 360,110" fill="none" stroke="#395261" stroke-width="1.2" opacity=".3"></path></svg>
+      <div style="position:absolute;top:24px;right:26px;text-align:right">
+        <div style="font-family:'Zain',sans-serif;font-weight:800;font-size:16px;color:#14212A">الاسم هنا</div>
+        <div style="font-size:10.5px;color:#395261">المؤسس والمدير التنفيذي</div>
+      </div>
+      <div style="position:absolute;bottom:20px;right:26px;font-size:9.5px;color:#395261;line-height:1.9">الرياض — المهدية<br>+966 5X XXX XXXX · @curvespa.sa</div>
+      <img src="assets/img-07.png" style="position:absolute;bottom:18px;left:22px;max-width:26%">
+    </div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:28px;margin:90px 0 8px;text-align:center">بطاقة الإهداء — <b style="font-weight:800">«أهدِ انحناءة»</b></h3>
+  <p style="text-align:center;color:#8FA6B2;max-width:600px;margin:0 auto 34px;font-size:14.5px">بروح كوبونات الإهداء المرجعية: بطاقة عاجيّة هادئة، قيمة كبيرة واضحة، والخط الحي علامة مائية.</p>
+  <div style="display:flex;gap:22px;flex-wrap:wrap;justify-content:center">
+    <div style="width:min(460px,100%);aspect-ratio:1.9;border-radius:12px;position:relative;overflow:hidden;background:#F5F1EA;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+      <svg sc-camel-view-box="0 0 460 242" sc-camel-preserve-aspect-ratio="none" style="position:absolute;inset:0;width:100%;height:100%">
+        <defs>
+          <linearGradient id="waveSatin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#A9834E"></stop><stop offset=".45" stop-color="#E2C088"></stop><stop offset=".6" stop-color="#CBA96E"></stop><stop offset="1" stop-color="#9a7947"></stop></linearGradient>
+        </defs>
+        <path d="M96,-12 C 56,44 136,86 92,132 C 56,170 116,208 88,254" fill="none" stroke="url(#waveSatin)" stroke-width="24"></path>
+        <path d="M96,-12 C 56,44 136,86 92,132 C 56,170 116,208 88,254" fill="none" stroke="#F1DCB4" stroke-width="2.2" opacity=".75"></path>
+        <path d="M104,-12 C 64,44 144,86 100,132 C 64,170 124,208 96,254" fill="none" stroke="#8f6f40" stroke-width="1.4" opacity=".5"></path>
+      </svg>
+      <svg sc-camel-view-box="0 0 400 250" style="position:absolute;inset:0;width:100%;height:100%;opacity:.12"><path d="M-10,190 C90,120 170,220 270,150 C340,102 380,130 410,115" fill="none" stroke="#395261" stroke-width="3"></path></svg>
+      <img src="assets/img-01.png" style="position:absolute;top:20px;right:24px;max-width:22%">
+      <div style="position:absolute;top:20px;left:38%;text-align:left">
+        <div style="font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:.32em;color:#B08D57">GIFT VOUCHER</div>
+        <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:24px;color:#14212A;line-height:1.3">بطاقة إهداء</div>
+      </div>
+      <div style="position:absolute;top:46%;right:24px;text-align:right">
+        <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:14px;color:#395261">الراحة… لغة من يحبك</div>
+        <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:40px;color:#14212A;line-height:1.2">٣٠٠ <span style="font-size:16px;color:#395261">ر.س</span></div>
+      </div>
+      <div style="position:absolute;bottom:20px;right:24px;font-size:10px;color:#395261;line-height:2">إلى: ــــــــــــــــ<br>من: ــــــــــــــــ</div>
+      <div style="position:absolute;bottom:20px;left:38%;text-align:left">
+        <div style="width:40px;height:40px;border:1px solid #395261;border-radius:4px;display:grid;place-items:center;font-size:6.5px;color:#395261;text-align:center">QR<br>الحجز</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:6.5px;letter-spacing:.2em;color:#B08D57;margin-top:6px">CURVESPA.SA</div>
+      </div>
+    </div>
+    <div style="width:min(460px,100%);aspect-ratio:1.9;border-radius:12px;position:relative;overflow:hidden;background:linear-gradient(120deg,#0F1920,#1C2E39 55%,#233b48);border:1px solid rgba(176,141,87,.35)">
+      <svg sc-camel-view-box="0 0 460 242" sc-camel-preserve-aspect-ratio="none" style="position:absolute;inset:0;width:100%;height:100%;opacity:.9">
+        <path d="M96,-12 C 56,44 136,86 92,132 C 56,170 116,208 88,254" fill="none" stroke="rgba(203,169,110,.8)" stroke-width="14"></path>
+        <path d="M96,-12 C 56,44 136,86 92,132 C 56,170 116,208 88,254" fill="none" stroke="#F1DCB4" stroke-width="1.6" opacity=".7"></path>
+      </svg>
+      <svg sc-camel-view-box="0 0 400 250" style="position:absolute;inset:0;width:100%;height:100%"><path d="M-10,200 C90,140 170,230 280,160 C350,115 390,145 410,130" fill="none" stroke="#B08D57" stroke-width="1.6"></path></svg>
+      <div style="position:absolute;top:24px;right:30px;text-align:right">
+        <div style="font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:.32em;color:#B08D57">GIFT CARD</div>
+        <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:20px;color:#D8CCBC;margin-top:6px">لمن تحب…</div>
+        <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#F5F1EA">الراحة لغة الحب</div>
+      </div>
+      <div style="position:absolute;top:26px;left:26px;width:34px;height:34px;border:1px solid rgba(176,141,87,.6);border-radius:50%;display:grid;place-items:center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#CBA96E" stroke-width="1.5"><rect x="3" y="8" width="18" height="13" rx="1"></rect><path d="M3 12h18M12 8v13M12 8c-2-4-7-4-7-1s5 1 7 1zm0 0c2-4 7-4 7-1s-5 1-7 1z"></path></svg></div>
+      <div style="position:absolute;bottom:24px;right:30px;font-family:'Montserrat',sans-serif;color:#B08D57;font-size:9px;letter-spacing:.35em">CURVE SPA — صالحة لجميع الجلسات</div>
+      <img src="assets/img-11.png" style="position:absolute;bottom:20px;left:24px;max-width:24%">
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px;margin-top:80px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">منيو الخدمات</div><p style="color:#8FA6B2;font-size:14px;margin:0">دفتر عاجي بغلاف بترولي ونقش نحاسي. الخدمات قصص قصيرة لا قائمة أسعار: «الاستشفاء العميق — ٩٠ دقيقة لعضلات عرفت التمرين».</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">اليونيفورم</div><p style="color:#8FA6B2;font-size:14px;margin:0">قميص ليلي بياقة ماندارين، الرمز مطرّز نحاسيًا. كلما توغلت في المكان، زاد عمق اللون.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">الواجهة</div><p style="color:#8FA6B2;font-size:14px;margin:0">حجر داكن، شعار مضيء بأبيض دافئ خافت، وشريط إضاءة نحاسي. ليلًا تكون أهدأ نقطة في الشارع — وهذا ما يلفت.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">طقوس كيرف — المنتجات</div><p style="color:#8FA6B2;font-size:14px;margin:0">زيت الجلسة، شمعة المكان، ملح استحمام: زجاج داكن، ملصق عاجي، غطاء نحاسي — «Curve Rituals».</p></div>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="social" data-screen-label="05 السوشيال ميديا" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">05 — Social Media</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">حساب يُعرف <b style="font-weight:800">بلا اسم</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:660px;margin:0 auto 56px;font-size:16px">الاختبار: لو أخفينا الاسم، هل يُعرف المنشور أنه كيرف؟ ثلاثة قوالب ثابتة مستوحاة من أفضل ممارسات السوق — صورة تحكي، شريط نص هادئ، وختام بالشعار وحده.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
+    <div>
+      <div style="aspect-ratio:1;border-radius:6px;position:relative;overflow:hidden;background:#1C2E39">
+        <img src="assets/img-10.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%">
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.75) 0%,rgba(16,27,35,.1) 45%,rgba(16,27,35,.25))"></div>
+        <img src="assets/img-09.png" style="position:absolute;top:16px;left:50%;transform:translateX(-50%);width:22%;opacity:.92">
+        <div style="position:absolute;bottom:18%;left:50%;transform:translateX(-50%);background:rgba(20,33,42,.55);backdrop-filter:blur(2px);padding:8px 22px;font-family:'Zain',sans-serif;font-weight:700;font-size:16px;color:#F5F1EA;white-space:nowrap">هنا… يطفو عنك ثقل الأسبوع</div>
+        <div style="position:absolute;top:50%;right:10px;transform:translateY(-50%) rotate(90deg);font-family:'Montserrat',sans-serif;font-size:7px;letter-spacing:.3em;color:rgba(245,241,234,.6)">CURVESPA.SA</div>
+      </div>
+      <p style="color:#8FA6B2;font-size:12.5px;margin-top:10px;text-align:center">١ · بوست الصورة: القفل الأبيض صغير أعلى الوسط + شريط نص شفاف</p>
+    </div>
+    <div>
+      <div style="aspect-ratio:1;border-radius:6px;position:relative;overflow:hidden;background:linear-gradient(140deg,#1C2E39,#233b48)">
+        <img src="assets/img-16.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%">
+        <div style="position:absolute;inset:0;background:linear-gradient(140deg,rgba(20,33,42,.75),rgba(28,46,57,.55))"></div>
+        <div style="position:absolute;top:34%;inset-inline:0;text-align:center;padding:0 20px">
+          <div style="display:inline-block;background:#395261;padding:10px 28px;position:relative">
+            <div style="font-family:'Zain',sans-serif;font-weight:800;font-size:19px;color:#F5F1EA">الاستشفاء العميق</div>
+            <div style="position:absolute;bottom:-14px;left:14px;font-family:'Great Vibes',cursive;font-size:24px;color:#CBA96E;transform:rotate(-4deg)">deep recovery</div>
+          </div>
+          <div style="font-size:11px;color:#8FA6B2;margin-top:30px">٩٠ دقيقة لعضلات عرفت التمرين</div>
+        </div>
+        <svg sc-camel-view-box="0 0 300 40" style="position:absolute;bottom:20%;inset-inline:0"><path d="M0,26 C70,8 140,34 220,16 C260,8 285,18 300,14" fill="none" stroke="#B08D57" stroke-width="1.2"></path></svg>
+        <img src="assets/img-14.png" style="position:absolute;top:14px;right:16px;width:11%;opacity:.9">
+      </div>
+      <p style="color:#8FA6B2;font-size:12.5px;margin-top:10px;text-align:center">٢ · بطاقة الخدمة: بلوك بترولي + توقيع سكربت نحاسي — الرمز فقط بالزاوية</p>
+    </div>
+    <div>
+      <div style="aspect-ratio:1;border-radius:6px;position:relative;overflow:hidden;background:radial-gradient(320px 260px at 50% 115%,rgba(57,82,97,.55),transparent),#101B23;border:1px solid rgba(176,141,87,.3)">
+        <img src="assets/img-09.png" style="position:absolute;top:34%;left:50%;transform:translate(-50%,-50%);width:52%">
+        <div style="position:absolute;top:52%;inset-inline:0;text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:14px;color:#D8CCBC">هنا… <b style="font-weight:800;color:#F5F1EA">ينحني التعب</b></div>
+        <div style="position:absolute;bottom:0;inset-inline:0;border-top:1px solid rgba(143,166,178,.25);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="width:30px;height:30px;border:1px solid #8FA6B2;border-radius:3px;display:grid;place-items:center;font-size:6px;color:#8FA6B2">QR</div>
+          <div style="font-size:8.5px;color:#8FA6B2;text-align:center;line-height:1.7">في كيرف نؤمن أن الراحة تبدأ بفهم الجسد —<br>جلسات بأيدي أخصائيين يفهمون العضلة والألم</div>
+          <div style="font-size:8.5px;color:#D8CCBC;white-space:nowrap">احجز الآن | واتساب<br>05X XXX XXXX</div>
+        </div>
+      </div>
+      <p style="color:#8FA6B2;font-size:12.5px;margin-top:10px;text-align:center">٣ · الختام: الشعار وحده + شريط سفلي بالـQR والواتساب — آخر شريحة في كل كاروسيل</p>
+    </div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:28px;margin:90px 0 24px;text-align:center">إيقاع <b style="font-weight:800">الشبكة</b></h3>
+  <div style="position:relative;max-width:720px;margin:0 auto;padding:38px;border-radius:10px;overflow:hidden">
+    <img src="assets/img-06.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:rgba(16,27,35,.82)"></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;border-radius:6px;overflow:hidden;position:relative">
+    <div style="aspect-ratio:1;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px"><img src="assets/img-08.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%"><div style="position:absolute;inset:0;background:rgba(16,27,35,.68)"></div><div style="position:relative;font-family:'Zain',sans-serif;font-weight:200;font-size:15px;color:#D8CCBC;line-height:1.7">رقبتك تحمل<br><b style="font-weight:900;color:#F5F1EA">اجتماعات الأسبوع</b></div><div style="position:relative;font-family:'Great Vibes',cursive;font-size:15px;color:#CBA96E;margin-top:6px">let it bend</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden"><img src="assets/img-18.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.55),rgba(16,27,35,.05) 50%)"></div><div style="position:absolute;bottom:8px;inset-inline:0;text-align:center;font-size:9px;color:rgba(245,241,234,.85)">أيدي أخصائي</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px"><img src="assets/img-12.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:rgba(16,27,35,.72)"></div><div style="position:relative;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:.35em;color:#CBA96E">SIGNATURE</div><div style="position:relative;color:#F5F1EA;font-family:'Zain',sans-serif;font-weight:900;font-size:15px;margin-top:4px">الاستشفاء العميق</div><div style="position:relative;font-family:'Great Vibes',cursive;font-size:14px;color:#CBA96E">deep recovery · 90 min</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden"><img src="assets/img-16.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.55),rgba(16,27,35,.05) 50%)"></div><div style="position:absolute;bottom:8px;inset-inline:0;text-align:center;font-size:9px;color:rgba(245,241,234,.85)">طقس الزيت — على ضوء الشموع</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/img-10.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%"><div style="position:absolute;inset:0;background:rgba(15,25,32,.8)"></div><img src="assets/img-09.png" style="width:56%;position:relative"></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden"><img src="assets/img-02.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.55),rgba(16,27,35,.05) 50%)"></div><div style="position:absolute;bottom:8px;inset-inline:0;text-align:center;font-size:9px;color:rgba(245,241,234,.85)">ريل — بخار بطيء</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px"><img src="assets/img-04.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:rgba(16,27,35,.72)"></div><div style="position:relative;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:.35em;color:#CBA96E">EXPERT NOTE</div><div style="position:relative;font-family:'Zain',sans-serif;font-weight:200;font-size:13px;color:#D8CCBC;margin-top:6px;line-height:1.7">الجلوس ٨ ساعات<br><b style="font-weight:800;color:#F5F1EA">يفعل هذا بظهرك</b></div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden"><img src="assets/img-13.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.55),rgba(16,27,35,.05) 50%)"></div><div style="position:absolute;bottom:8px;inset-inline:0;text-align:center;font-size:9px;color:rgba(245,241,234,.85)">طقس القدمين — من أول خطوة</div></div>
+    <div style="aspect-ratio:1;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px"><img src="assets/img-19.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"><div style="position:absolute;inset:0;background:rgba(16,27,35,.66)"></div><div style="position:relative;font-family:'Zain',sans-serif;font-weight:200;font-size:15px;color:#D8CCBC">هنا… <b style="font-weight:900;color:#F5F1EA">ينحني التعب</b></div><div style="position:relative;font-family:'Great Vibes',cursive;font-size:14px;color:#CBA96E;margin-top:4px">where tension bends</div></div>
+  </div>
+  </div>
+  <p style="color:#8FA6B2;font-size:13.5px;margin-top:16px;text-align:center;max-width:600px;margin-inline:auto">القاعدة: لا تتجاور بطاقتان نصيتان أبدًا — دائمًا صورة تفصل بينهما. الشبكة تتنفس مثل العلامة.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;margin-top:70px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">أنواع المحتوى الخمسة</div>
+      <ul style="list-style:none;padding:0;margin:0;color:#8FA6B2;font-size:14.5px">
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">جُمل العلامة:</b> عبارة واحدة على ليل — الأكثر مشاركة.</li>
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">بطاقات الخدمات:</b> اسم + سطر قصة + المدة.</li>
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">خبرة الأخصائي:</b> معلومات الجسم والألم — تبني المصداقية.</li>
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">المكان:</b> لقطات بطيئة، بخار، إضاءة.</li>
+        <li><span style="color:#B08D57">—</span> <b style="color:#F5F1EA">الضيافة والمناسبات:</b> بطاقة الإهداء والعروض بنبرة هادئة.</li>
+      </ul>
+    </div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:14px">قواعد النشر</div>
+      <ul style="list-style:none;padding:0;margin:0;color:#8FA6B2;font-size:14.5px">
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> الستوري: قوالب ليلية بخط حي متحرك + استطلاعات «وين يتركز توترك؟».</li>
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> الهايلايتس: أيقونات خطية نحاسية موحدة.</li>
+        <li style="margin-bottom:10px"><span style="color:#B08D57">—</span> الكابشن: سطران كحد أقصى + «احجز جلستك — الرابط بالبايو».</li>
+        <li><span style="color:#B08D57">—</span> الرد بصيغة «الخبير الهادئ» — بلا إيموجي صارخ.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="logoplace" data-screen-label="05.ب اللوقو في المحتوى" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">05.B — Logo in Content</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">وين يوضع <b style="font-weight:800">اللوقو؟</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 50px;font-size:16px">قاعدة ذهبية واحدة: <b style="color:#D8CCBC">أثناء المحتوى الرمز فقط، وفي الختام والإعلان القفل الكامل.</b></p>
+  <div style="display:flex;gap:30px;flex-wrap:wrap;justify-content:center;margin-bottom:60px">
+    <div style="text-align:center">
+      <div style="width:230px;aspect-ratio:9/16;border-radius:24px;border:1px solid rgba(143,166,178,.3);position:relative;overflow:hidden;margin:0 auto">
+        <img src="assets/img-08.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.8) 0%,rgba(16,27,35,.15) 45%,rgba(16,27,35,.2))"></div>
+        <img src="assets/img-14.png" style="position:absolute;top:9%;right:8%;width:13%;opacity:.9">
+        <div style="position:absolute;top:44%;inset-inline:16%;text-align:center;font-family:'Zain',sans-serif;font-weight:800;font-size:15px;color:#F5F1EA">«لكل شدّة…<br>انحناءة»</div>
+        <div style="position:absolute;bottom:0;inset-inline:0;height:16%;border-top:1px dashed rgba(201,138,138,.5);background:rgba(201,138,138,.07);display:flex;align-items:center;justify-content:center;font-size:9px;color:#c98a8a">منطقة الكابشن — ممنوع اللوقو</div>
+      </div>
+      <p style="color:#8FA6B2;font-size:12.5px;margin-top:10px">أثناء الريل/الستوري: الرمز فقط أعلى اليمين — ١٢٪ · شفافية ٨٥٪</p>
+    </div>
+    <div style="text-align:center">
+      <div style="width:230px;aspect-ratio:9/16;border-radius:24px;border:1px solid rgba(176,141,87,.5);position:relative;overflow:hidden;background:radial-gradient(360px 280px at 50% 112%,rgba(57,82,97,.6),transparent),#101B23;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+        <img src="assets/img-09.png" style="width:58%">
+        <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:13px;color:#D8CCBC">هنا… <b style="font-weight:800;color:#F5F1EA">ينحني التعب</b></div>
+        <svg width="130" height="22" sc-camel-view-box="0 0 130 22"><path d="M0,15 C28,4 52,20 80,9 C104,2 118,13 130,7" fill="none" stroke="#B08D57" stroke-width="1.3"></path></svg>
+      </div>
+      <p style="color:#8FA6B2;font-size:12.5px;margin-top:10px">الختام: القفل الكامل وسط الشاشة — ثانيتان + التوقيع الصوتي</p>
+    </div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:26px;margin:20px 0 8px;text-align:center">أشكال <b style="font-weight:800">المحتوى الثلاثة</b></h3>
+  <p style="text-align:center;color:#8FA6B2;max-width:560px;margin:0 auto 30px;font-size:14px">ستوري يومي، بوست يومي، وإعلان ممول — نفس النظام، ثلاث مهام مختلفة.</p>
+  <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:flex-end;margin-bottom:60px">
+    <div style="text-align:center">
+      <div style="width:190px;aspect-ratio:9/16;border-radius:18px;position:relative;overflow:hidden">
+        <img src="assets/img-02.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.8),rgba(16,27,35,.35))"></div>
+        <img src="assets/img-14.png" style="position:absolute;top:6%;left:50%;transform:translateX(-50%);width:16%;opacity:.9">
+        <div style="position:absolute;top:38%;inset-inline:12px;text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:13px;color:#D8CCBC;line-height:1.8">وين يتركز<br><b style="font-weight:900;color:#F5F1EA">توترك اليوم؟</b></div>
+        <div style="position:absolute;top:56%;inset-inline:26px;display:grid;gap:6px">
+          <div style="border:1px solid rgba(203,169,110,.5);border-radius:100px;padding:4px;font-size:9px;color:#D8CCBC">الرقبة والكتف</div>
+          <div style="border:1px solid rgba(203,169,110,.5);border-radius:100px;padding:4px;font-size:9px;color:#D8CCBC">أسفل الظهر</div>
+        </div>
+        <div style="position:absolute;bottom:12px;inset-inline:0;text-align:center;font-family:'Great Vibes',cursive;font-size:13px;color:#CBA96E">curve spa</div>
+      </div>
+      <p style="color:#8FA6B2;font-size:12px;margin-top:10px"><b style="color:#D8CCBC">الستوري اليومي</b> — تفاعل خفيف: استطلاع + الرمز أعلى الوسط</p>
+    </div>
+    <div style="text-align:center">
+      <div style="width:210px;aspect-ratio:1;border-radius:8px;position:relative;overflow:hidden;background:linear-gradient(140deg,#1C2E39,#233b48)">
+        <img src="assets/img-05.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%">
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.85) 0%,rgba(20,33,42,.55) 55%,rgba(16,27,35,.45))"></div>
+        <img src="assets/img-14.png" style="position:absolute;top:12px;right:14px;width:11%;opacity:.9">
+        <div style="position:absolute;top:36%;inset-inline:14px;text-align:center">
+          <div style="font-family:'Zain',sans-serif;font-weight:200;font-size:15px;color:#D8CCBC;line-height:1.7">راحتك تبدأ<br><b style="font-weight:900;color:#F5F1EA">من أول رشفة</b></div>
+        </div>
+        <svg sc-camel-view-box="0 0 210 30" style="position:absolute;bottom:18%;inset-inline:0"><path d="M0,20 C50,6 100,26 150,12 C180,5 198,14 210,10" fill="none" stroke="#B08D57" stroke-width="1.1"></path></svg>
+      </div>
+      <p style="color:#8FA6B2;font-size:12px;margin-top:10px"><b style="color:#D8CCBC">البوست اليومي</b> — جملة واحدة على ليل + خط حي</p>
+    </div>
+    <div style="text-align:center">
+      <div style="width:200px;aspect-ratio:4/5;border-radius:8px;position:relative;overflow:hidden;border:1px solid rgba(176,141,87,.35)">
+        <img src="assets/img-19.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,27,35,.85) 0%,rgba(16,27,35,.25) 50%,rgba(16,27,35,.45))"></div>
+        <img src="assets/img-09.png" style="position:absolute;top:9%;left:50%;transform:translateX(-50%);width:34%">
+        <div style="position:absolute;top:36%;inset-inline:12px;text-align:center">
+          <div style="font-family:'Zain',sans-serif;font-weight:900;font-size:16px;color:#F5F1EA">ابدأ جلستك<br>من الماء الدافئ</div>
+          <div style="font-size:9.5px;color:#D8CCBC;margin-top:6px">الجاكوزي الحار — يفكّ العضلة قبل أن تلمسها أيدينا</div>
+        </div>
+        <div style="position:absolute;bottom:10%;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#B08D57,#CBA96E);color:#14212A;font-weight:700;font-size:11px;border-radius:100px;padding:7px 22px;white-space:nowrap">احجز جلستك</div>
+      </div>
+      <p style="color:#8FA6B2;font-size:12px;margin-top:10px"><b style="color:#D8CCBC">الإعلان الممول</b> — القفل كامل + زر نحاسي واحد ورسالة واحدة</p>
+    </div>
+  </div>
+  <div style="border:1px solid rgba(143,166,178,.15);border-radius:4px;overflow:auto">
+    <sc-raw-table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px">
+      <sc-raw-tr><sc-raw-th style="color:#CBA96E;text-align:right;padding:14px;border-bottom:1px solid rgba(176,141,87,.35);font-size:12.5px">الوسيط</sc-raw-th><sc-raw-th style="color:#CBA96E;text-align:right;padding:14px;border-bottom:1px solid rgba(176,141,87,.35);font-size:12.5px">نسخة اللوقو</sc-raw-th><sc-raw-th style="color:#CBA96E;text-align:right;padding:14px;border-bottom:1px solid rgba(176,141,87,.35);font-size:12.5px">المكان</sc-raw-th><sc-raw-th style="color:#CBA96E;text-align:right;padding:14px;border-bottom:1px solid rgba(176,141,87,.35);font-size:12.5px">الحجم/الشفافية</sc-raw-th></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">ريلز (أثناء الفيديو)</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">الرمز فقط</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">الزاوية العليا المقابلة للأزرار</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">~١٢٪ · ٨٥٪</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">ريلز (الختام)</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">القفل الكامل</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">وسط الشاشة على ليل</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">~٦٠٪ · ثانيتان</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">ستوري</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">الرمز فقط</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">أعلى الوسط تحت اسم الحساب</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">~١٠٪ · ٨٥٪</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">بوست صورة</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">القفل الأبيض</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">أعلى الوسط (كالمراجع)</sc-raw-td><sc-raw-td style="padding:13px 14px;border-bottom:1px solid rgba(143,166,178,.1)">~٢٢٪ · ٩٠٪</sc-raw-td></sc-raw-tr>
+      <sc-raw-tr><sc-raw-td style="padding:13px 14px">إعلان ممول</sc-raw-td><sc-raw-td style="padding:13px 14px">القفل الكامل</sc-raw-td><sc-raw-td style="padding:13px 14px">أول ٣ ثوانٍ + علامة مائية</sc-raw-td><sc-raw-td style="padding:13px 14px">≥١٢٪ · ١٠٠٪</sc-raw-td></sc-raw-tr>
+    </sc-raw-table>
+  </div>
+  <p style="color:#8FA6B2;font-size:12.5px;margin-top:14px;text-align:center">النِّسَب تقريبية — الاختبار النهائي: ارفع التصميم كمسودة وتأكد أن الأزرار لا تغطي اللوقو.</p>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="senses" data-screen-label="06 الهوية الحسية" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">06 — Sensory Identity</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">العلامة التي <b style="font-weight:800">تُشَمّ وتُسمَع</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 56px;font-size:16px">الهوية البصرية يمكن تقليدها — الهوية الحسّية لا.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px">
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">التوقيع العطري</div><p style="color:#8FA6B2;font-size:14px;margin:0"><b style="color:#D8CCBC">«عود مائي»</b> — عود خفيف على قاعدة بحرية، رائحة واحدة مسجّلة لكل الفروع. بعد سنة يشمها عميلك في أي مكان ويقول: كيرف.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">التوقيع الصوتي</div><p style="color:#8FA6B2;font-size:14px;margin:0">موسيقى بإيقاع ~٦٠ نبضة في الدقيقة تساعد الجسم على التباطؤ — نفس النغمة تختم كل ريل.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">الضيافة الموقعة</div><p style="color:#8FA6B2;font-size:14px;margin:0">قهوة سعودية شتاءً وماء ورد بالنعناع صيفًا بكوب حجري منقوش — وبعد الجلسة تمر وشاي أعشاب.</p></div>
+    <div><div style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.4em;color:#B08D57;margin-bottom:10px">اللمس</div><p style="color:#8FA6B2;font-size:14px;margin:0">مناشف فندقية ثقيلة بلون الرمل، أرضيات حجر دافئ — الانتقال من خشونة المدينة لنعومة الغرفة يرويه اللمس.</p></div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:28px;margin:90px 0 30px;text-align:center">طقس كيرف — <b style="font-weight:800">الرحلة الخمسية</b></h3>
+  <div style="display:grid;gap:0;border-top:1px solid rgba(143,166,178,.15)">
+    <div style="display:flex;gap:22px;align-items:baseline;padding:24px 8px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#B08D57;min-width:48px">٠١</div><div><b>العتبة</b><p style="color:#8FA6B2;font-size:14px;margin:4px 0 0">إضاءة تنخفض تدريجيًا، الهاتف يدخل وضع الصمت طوعًا — ضجيج الرياض ينتهي هنا.</p></div></div>
+    <div style="display:flex;gap:22px;align-items:baseline;padding:24px 8px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#B08D57;min-width:48px">٠٢</div><div><b>القراءة</b><p style="color:#8FA6B2;font-size:14px;margin:4px 0 0">دقيقتان مع الأخصائي: «وين يتركز تعبك؟ نومك؟ جلوسك؟» — يفهم قبل أن يلمس.</p></div></div>
+    <div style="display:flex;gap:22px;align-items:baseline;padding:24px 8px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#B08D57;min-width:48px">٠٣</div><div><b>الانحناءة</b><p style="color:#8FA6B2;font-size:14px;margin:4px 0 0">الجلسة بمعايير موحدة مكتوبة: حرارة الغرفة، الزيت، تسلسل البداية والختام.</p></div></div>
+    <div style="display:flex;gap:22px;align-items:baseline;padding:24px 8px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#B08D57;min-width:48px">٠٤</div><div><b>العودة البطيئة</b><p style="color:#8FA6B2;font-size:14px;margin:4px 0 0">غرفة استرخاء، إضاءة ترتفع بلطف، ونصيحة واحدة مخصصة من الأخصائي لجسده.</p></div></div>
+    <div style="display:flex;gap:22px;align-items:baseline;padding:24px 8px;border-bottom:1px solid rgba(143,166,178,.15)"><div style="font-family:'Zain',sans-serif;font-weight:900;font-size:28px;color:#B08D57;min-width:48px">٠٥</div><div><b>الأثر</b><p style="color:#8FA6B2;font-size:14px;margin:4px 0 0">رسالة بعد ساعتين: «جسمك أخذ راحته اليوم. اشرب ماء أكثر الليلة» — بلا بيع، البيع يأتي وحده.</p></div></div>
+  </div>
+</section>
+<div style="height:1px;max-width:1040px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(176,141,87,.4),transparent)"></div>
+<section id="future" data-screen-label="07 معمارية العلامة" style="max-width:1040px;margin:0 auto;padding:130px 32px">
+  <div style="text-align:center;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.5em;color:#B08D57;text-transform:uppercase">07 — Brand Architecture</div>
+  <h2 style="text-align:center;font-family:'Zain',sans-serif;font-weight:200;font-size:clamp(32px,5vw,50px);margin:10px 0 16px;line-height:1.5">من فرع المهدية إلى <b style="font-weight:800">علامة وطنية</b></h2>
+  <p style="text-align:center;color:#8FA6B2;max-width:640px;margin:0 auto 56px;font-size:16px">نظام أم واحد، وامتدادات تحمل اسمه — هوية تتوسع بلا إعادة تصميم.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px">
+    <div style="border:1px solid rgba(176,141,87,.4);border-radius:4px;padding:30px 26px"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:21px">كيرف سبا</div><div style="font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.3em;color:#B08D57;margin:4px 0 12px">CURVE SPA — الفروع</div><p style="color:#8FA6B2;font-size:14px;margin:0">كل فرع باسم الحي: كيرف سبا — المهدية. نفس الرحلة، نفس الرائحة، نفس الخط الحي.</p></div>
+    <div style="border:1px solid rgba(143,166,178,.18);border-radius:4px;padding:30px 26px"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:21px">طقوس كيرف</div><div style="font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.3em;color:#B08D57;margin:4px 0 12px">CURVE RITUALS — المنتجات</div><p style="color:#8FA6B2;font-size:14px;margin:0">الزيوت والشموع والعطور — تُباع في الفروع أولًا ثم أونلاين وبالتجزئة الراقية.</p></div>
+    <div style="border:1px solid rgba(143,166,178,.18);border-radius:4px;padding:30px 26px"><div style="font-family:'Zain',sans-serif;font-weight:800;font-size:21px">نادي كيرف</div><div style="font-family:'Montserrat',sans-serif;font-size:9.5px;letter-spacing:.3em;color:#B08D57;margin:4px 0 12px">CURVE CLUB — العضوية</div><p style="color:#8FA6B2;font-size:14px;margin:0">اشتراك شهري بأولوية حجز وبطاقة نحاسية فعلية — يحوّل الزائر إلى منتمٍ.</p></div>
+  </div>
+  <h3 style="font-family:'Zain',sans-serif;font-weight:200;font-size:28px;margin:90px 0 30px;text-align:center">خارطة <b style="font-weight:800">الطريق</b></h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px">
+    <div style="border-top:2px solid #B08D57;padding:20px 4px"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:17px">١ — الآن</div><p style="color:#8FA6B2;font-size:13.5px;margin:8px 0 0">إطلاق المهدية بالهوية كاملة + السوشيال بالنظام الجديد + تسجيل العلامة لدى هيئة الملكية الفكرية.</p></div>
+    <div style="border-top:2px solid rgba(176,141,87,.45);padding:20px 4px"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:17px">٢ — الترسيخ</div><p style="color:#8FA6B2;font-size:13.5px;margin:8px 0 0">توثيق الطقس الخمسي كدليل تشغيل، إطلاق نادي كيرف، وبناء التقييمات.</p></div>
+    <div style="border-top:2px solid rgba(176,141,87,.45);padding:20px 4px"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:17px">٣ — التمدد</div><p style="color:#8FA6B2;font-size:13.5px;margin:8px 0 0">أول منتجات «طقوس كيرف»، ثم الفرع الثاني شمال الرياض بهوية مجرّبة.</p></div>
+    <div style="border-top:2px solid rgba(176,141,87,.45);padding:20px 4px"><div style="color:#CBA96E;font-family:'Zain',sans-serif;font-weight:800;font-size:17px">٤ — الشبكة</div><p style="color:#8FA6B2;font-size:13.5px;margin:8px 0 0">دليل الفرنشايز الكامل والتوسع للمدن الكبرى — الهوية الحسّية تجعل النسخ ممكنًا بلا فقدان الروح.</p></div>
+  </div>
+  <div style="border:1px solid rgba(143,166,178,.15);border-radius:4px;padding:22px 26px;margin-top:70px;font-family:'Montserrat',sans-serif;direction:ltr;text-align:left;font-size:12.5px;color:#8FA6B2;line-height:2.1">
+    --night:#14212A · --petrol:#395261 · --mist:#8FA6B2 · --sand:#D8CCBC · --ivory:#F5F1EA · --bronze:#B08D57<br>
+    heading:'Zain' (900/200) · body:'Almarai' · latin:'Montserrat' · script-accent:'Great Vibes'<br>
+    accent-usage ≤8% · line-motif: single bronze curve 1.2–3px
+  </div>
+</section>
+<footer style="padding:90px 24px;text-align:center;color:#8FA6B2;font-size:13px">
+  <img src="assets/img-20.png" style="width:min(220px,60vw);opacity:.9">
+  <div style="margin-top:22px">كيرف سبا — دليل العلامة والهوية البصرية · الإصدار الثاني · يوليو ٢٠٢٦<br>من تنفيذ: تركي المترك</div>
+  <div style="font-family:'Great Vibes',cursive;font-size:22px;color:#B08D57;margin-top:10px">Where tension bends</div>
+</footer>
+</div>
+</div>
+</x-dc>
+
+
+</body></html>
