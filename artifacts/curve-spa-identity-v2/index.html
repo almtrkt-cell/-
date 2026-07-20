@@ -391,6 +391,25 @@ a{color:#CBA96E;text-decoration:none}a:hover{color:#F5F1EA}
   .steam-glow{animation:none;opacity:.8}}
 </style>
 <style>
+/* pdf slides — landscape 16:9 */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html{background:linear-gradient(rgba(16,27,35,.92),rgba(16,27,35,.95)),url("assets/img-02.jpg") center/cover no-repeat #101B23!important}
+  .steam-wisp{display:none!important}
+  .steam-glow{animation:none!important;opacity:.8}
+  [data-screen-label]{break-before:page}
+  [data-screen-label]:first-of-type{break-before:auto}
+  section[data-screen-label]{padding-top:56px!important;padding-bottom:56px!important}
+  a[href]::after{content:none!important}
+  div[style*="height:1px"]{display:none!important}
+  [data-screen-label="الغلاف"]{height:calc(100vh - 0.56in);min-height:0!important;overflow:hidden;box-sizing:border-box}
+  h1,h2,h3{break-after:avoid-page}
+  [style*="border-radius"]{break-inside:avoid}
+  [style*="display:grid"],[style*="display: grid"]{break-inside:avoid}
+  table{break-inside:avoid}
+}
+</style>
+<style>
 /* mobile fit */
 @media (max-width:700px){
   [style*="padding:130px 32px"],[style*="padding: 130px 32px"]{padding:72px 20px!important}
